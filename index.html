@@ -15,58 +15,50 @@
 <body>
     <div class="container py-4">
         <h1 class="h3 mb-4">Front Seat</h1>
+
+<div id="error-box" class="alert alert-danger d-none" role="alert"></div>
+
+<div class="row g-4 mb-4">
+  <div class="col-12 col-md-6">
+    <form id="payment-form" class="card card-body">
+      <div class="mb-3">
+        <label for="row" class="form-label">Row number</label>
+        <input type="number" class="form-control" id="row">
+      </div>
+      <div class="mb-3">
+        <label for="amountPaid" class="form-label">Amount paid (R)</label>
+        <input type="number" class="form-control" id="amountPaid" step="0.01">
+      </div>
+      <div class="mb-3">
+        <label for="passengers" class="form-label">Number of passengers</label>
+        <input type="number" class="form-control" id="passengers">
+        </div>
+      <button type="submit" class="btn btn-primary w-100">Add payment</button>
+      </form>
+  </div>
+
+<div class="col-12 col-md-6">
+  <div class="card card-body">
+    <h2 class="h5">Driver summary</h2>
+    <p class="mb-1">Fares collected: <strong id="total-collected">R0</strong></p>
+    <p class="mb-1">Passengers paid: <strong id="passengers-paid">0</strong></p>
+    <p class="mb-1">Change owed in total: <strong id="change-total">R0</strong></p>
+    <p class="mb-1">Change still to give: <strong id="change-outstanding">R0</strong></p>
+  </div>
+</div>
+</div>
     <table class="table table-striped align-middle">
-  <thead>
-    <tr>
-      <th scope="col">Row</th>
-      <th scope="col">Passengers</th>
-      <th scope="col">Paid</th>
-      <th scope="col">Fare</th>
-      <th scope="col">Change</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody id="payments-body">
-    <tr>
-      <th scope="Row">1</th>
-      <td>1</td>
-      <td>20</td>
-      <td>17</td>
-      <td>3</td>
-      <td>change given</td>
-    </tr>
-    <tr>
-      <th scope="Row">2</th>
-      <td>4</td>
-      <td>100</td>
-      <td>68</td>
-      <td>32</td>
-      <td>change given</td>
-    </tr>
-    <tr>
-      <th scope="Row">3</th>
-      <td>3</td>
-      <td>60</td>
-      <td>51</td>
-      <td>9</td>
-      <td>change given</td>
-    </tr>
-    <tr>
-      <th scope="Row">4</th>
-        <td>2</td>
-        <td>50</td>
-        <td>34</td>
-        <td>66</td>
-        <td>change given</td>
+   <tbody id="payments-body">
+    <thead>
+      <tr>
+        <th scope="col">Row</th>
+        <th scope="col">Passengers</th>
+        <th scope="col">Paid</th>
+        <th scope="col">Fare</th>
+        <th scope="col">Change</th>
+        <th scope="col">Status</th>
         </tr>
-        <tr>
-            <th scope="Row">5</th>
-            <td>4</td>
-            <td>70</td>
-            <td>68</td>
-            <td>2</td>
-            <td>change given</td>
-        </tr>
+    </thead>
   </tbody>
 </table>
     </div>
